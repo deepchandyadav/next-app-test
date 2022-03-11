@@ -20,29 +20,6 @@ body {
   margin: 20px 0;
 }
 
-.todo {
-  padding: 10px;
-  margin-bottom: 15px;
-  background: #c9c4ff;
-  color: #1803ff;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.todo p {
-  flex-basis: 410px;
-}
-
-.todo button {
-  padding: 5px;
-  border-radius: 10px;
-  max-height: 30px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-}
-
 nav {
   margin: 30px 0;
 }
@@ -50,27 +27,4 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-.user {
-  padding: 10px;
-  margin-bottom: 15px;
-  background: #c9c4ff;
-  color: #1803ff;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.user p {
-  flex-basis: 410px;
-}
-
-.user button {
-  padding: 5px;
-  border-radius: 10px;
-  max-height: 30px;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
 }

@@ -36,7 +36,6 @@ export default function Todos({ user, todos }) {
   const [todosData, setTodosData] = useState(todos);
   const onDelete = (todo) => () => {
     const newTodos = todosData.filter(onetodo => onetodo.id !== todo.id);
-    console.log(newTodos);
     setTodosData(newTodos);
   }
 
