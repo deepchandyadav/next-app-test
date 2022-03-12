@@ -1,25 +1,9 @@
 import { useState } from "react";
 import Todo from "./Todo";
+import { fetchTodos, fetchUser } from "../../helpers";
 
-async function fetchTodos(userId) {
-  let api = "https://jsonplaceholder.typicode.com/todos";
-  if (userId) {
-    api = `https://jsonplaceholder.typicode.com/todos?userId=${userId}`;
-  }
-  const res = await fetch(api)
-  const todos = await res.json();
-  return todos;
-}
-
-async function fetchUser(userId) {
-  if (!userId) return null;
-  const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
-  const user = await res.json();
-  return user;
-}
-
-export async function getServerSideProps(request, response) {
-  const { userid } = request.query;
+export async function getServerSideProps(context) {
+  const { userid } = context.query;
   const [user, todos] = await Promise.all([
     fetchUser(userid),
     fetchTodos(userid),

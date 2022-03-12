@@ -10,9 +10,6 @@ const Button = styled.button`
   flex-basis: auto;
 `;
 
-const P = styled.p`
-  flex-basis: 410px;
-`;
 
 const UserDiv = styled.div`
   padding: 10px;
@@ -26,10 +23,15 @@ const UserDiv = styled.div`
 
 export default function User({ id, name }) {
   return <UserDiv>
-    <P>{name}</P>
-    <Button>
-      <Link href={`/todos?userid=${id}`}>{`${name}'s Todo`}</Link>
-    </Button>
+    <p>{name}</p>
+    <div>
+      <Button>
+        <Link href={`/todos?userid=${id}`}>Todos</Link>
+      </Button>
+      <Button>
+        <Link href={`/albums?userid=${id}`}>Albums</Link>
+      </Button>
+    </div>
   </UserDiv>;
 }
 

@@ -8,6 +8,7 @@ function MyApp({ Component, pageProps }) {
         <li><Link href='/'>Home</Link></li>
         <li><Link href='/users'>Users</Link></li>
         <li><Link href='/todos'>Todos</Link></li>
+        <li><Link href='/albums'>Albums</Link></li>
       </ul>
     </nav>
     <Component  {...pageProps} />
